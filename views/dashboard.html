@@ -1,0 +1,363 @@
+<!DOCTYPE html><html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>Dashboard3 | TrackMe</title>
+	<link href="css/bootstrap.min.css" media="screen" rel="stylesheet" />
+	<link href="css/keen-dashboards.css" media="screen" rel="stylesheet" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/holder.js"></script>
+	<script src="js/keen.min.js"></script>
+	<script src="js/keen_dash.js" data-prjid=<%= pid %> data-readkey=<%= readk %>></script>
+	
+	
+
+  <body class="index admin_dashboard active_admin logged_in admin_namespace">
+    <div id="wrapper">
+      <div class="header" id="header">
+        <h1 class="site_title" id="site_title"></h1>
+      </div>
+      <div class="my_title_bar" id="title_bar"></div>
+      <div id="active_admin_content" class="without_sidebar">
+        <div id="main_content_wrapper">
+          <div id="main_content">
+            <div class="columns">
+              <div class="column" style="width: 100.0%;"><div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Acqua Antonio
+            </div>
+            <div class="chart-stage" id="acqua_day">
+              <img data-src="holder.js/100%x120/white">
+            </div>
+            <div class="chart-notes">
+              Andamento Giornaliero
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="acqua_day_target">--</div>
+            <div class="chart-notes">
+              Giornaliero
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Acqua Antonio
+            </div>
+            <div class="chart-stage" id="acqua_week">
+               <img data-src="holder.js/100%x120/white"> 
+            </div>
+            <div class="chart-notes">
+              Andamento Settimanale
+            </div>
+          </div>
+        </div>
+         <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="acqua_week_target">--</div>
+            <div class="chart-notes">
+              Settimanale
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Acqua Antonio
+            </div>
+            <div class="chart-stage" id="acqua_month">
+               <img data-src="holder.js/100%x120/white"> 
+            </div>
+            <div class="chart-notes">
+              Andamento Mensile
+            </div>
+          </div>
+        </div>
+         <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="acqua_month_target">--</div>
+            <div class="chart-notes">
+              Mensile
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-4">
+         <div class="row">
+        <div class="col-sm-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Peso
+          </div>
+          <div class="chart-stage" id="peso_week">
+            <img data-src="holder.js/100%x325/white">
+          </div>
+          <div class="chart-notes">
+            Andamento Settimanale
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Glicemia
+          </div>
+          <div class="chart-stage" id="glicemia_month">
+            <img data-src="holder.js/100%x325/white">
+          </div>
+          <div class="chart-notes">
+            Andamento Settimanale
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="row">
+         <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="passi_day_target">--</div>
+            <div class="chart-notes">
+              Giornaliero
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Passi Antonio
+            </div>
+            <div class="chart-stage" id="passi_day">
+              <img data-src="holder.js/100%x120/white">
+            </div>
+            <div class="chart-notes">
+              Andamento Giornaliero
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="passi_week_target">--</div>
+            <div class="chart-notes">
+              Settimanale
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Passi Antonio
+            </div>
+            <div class="chart-stage" id="passi_week">
+               <img data-src="holder.js/100%x120/white"> 
+            </div>
+            <div class="chart-notes">
+              Andamento Settimanale
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-3">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Target
+            </div>
+            <div class="chart-stage local_metric" id="passi_month_target">--</div>
+            <div class="chart-notes">
+              Mensile
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Passi Antonio
+            </div>
+            <div class="chart-stage" id="passi_month">
+               <img data-src="holder.js/100%x120/white"> 
+            </div>
+            <div class="chart-notes">
+              Andamento Mensile
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="row">
+       <div class="col-sm-6">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Consumo Gas
+           <div class="glyphicon glyphicon-refresh icon-refresh" aria-hidden="true" id="icon-refresh08"></div>
+        </div>
+        <div class="chart-stage"i id="chart08">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-6">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Consumo Gas New
+        </div>
+        <div class="chart-stage" id="chart08new">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-12">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Consumo Elettricita'
+        </div>
+        <div class="chart-stage" id="chart11">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-6">
+      	<div class="chart-wrapper">
+        	<div class="chart-title">
+	          Blogger Posts
+        	</div>
+	        <div class="chart-stage" id="chart13">
+        	  <img data-src="holder.js/100%x120/white">
+	        </div>
+        	<div class="chart-notes">
+	          Andamento Globale
+        	</div>
+      	</div>
+     </div>
+    <div class="col-sm-3">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Blogger Posts
+        </div>
+        <div class="chart-stage"  id="chart07">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Giornaliero
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Blogger Posts
+        </div>
+        <div class="chart-stage" id="chart10">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Mensile
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      <div class="row">
+      <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Walvola Cucina
+        </div>
+        <div class="chart-stage" id="chart-walvola-cucina">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+        <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Walvola Jasmine
+        </div>
+        <div class="chart-stage" id="chart-walvola-jasmine">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+        <div class="col-sm-4">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Walvola Bagno Rosa 
+        </div>
+        <div class="chart-stage" id="chart-walvola-brosa">
+          <img data-src="holder.js/100%x120/white">
+        </div>
+        <div class="chart-notes">
+          Andamento Settimanale
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <hr>
+  <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+</div>
+</div>
+            <div style="clear:both;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

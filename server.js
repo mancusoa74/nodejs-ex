@@ -13,6 +13,9 @@ app.use(express.static('public'));
 
 var user = process.env.USER
 var pwd = process.env.PASSWD
+var projid = process.env.PROJECTID
+var readKey = process.env.READKEY 
+
 
 app.use(basicAuth({
     authorizer: myAuthorizer,
@@ -28,7 +31,7 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 app.get('/', function (req, res) {
-  res.render('index.html', { pageCountMessage : null});
+  res.render('dashboard.html', { pid : projid, readk: readKey});
 });
 
 
