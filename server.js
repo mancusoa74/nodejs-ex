@@ -11,34 +11,17 @@ app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 app.use(express.static('public'));
 
+var user = process.env.USER
+var password = process.env.PASSWD
+
 app.use(basicAuth({
-    users: { 'someuser': 'somepassword' },
+    users: { user: password },
     challenge: true,
     realm: 'Imb4T3st4pp'
 }))
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-
-var user = process.env.USER
-var password = process.env.PASSWD
-
-
-app.get('/', function (req, res) {
-  res.render('index.html', { pageCountMessage : null});
-});
-
-app.get('/user', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  res.send(user);
-});
-
-app.get('/pwd', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  res.send(password);
-});
 
 // error handling
 app.use(function(err, req, res, next){
