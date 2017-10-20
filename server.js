@@ -12,16 +12,25 @@ app.use(morgan('combined'))
 app.use(express.static('public'));
 
 var user = process.env.USER
-var password = process.env.PASSWD
+var pwd = process.env.PASSWD
 
 app.use(basicAuth({
-    users: { user: password },
+    authorizer: myAuthorizer,
     challenge: true,
-    realm: 'Imb4T3st4pp'
+    realm: 'jkfhnweqsdl'
 }))
+
+function myAuthorizer(username, password) {
+    return username == user && password == pwd
+}
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
+app.get('/', function (req, res) {
+  res.render('index.html', { pageCountMessage : null});
+});
+
 
 // error handling
 app.use(function(err, req, res, next){
