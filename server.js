@@ -25,7 +25,7 @@ var mqtt_server = process.env.MQTT_SERVER
 var broadcast_dst = process.env.BROADCAST_DST
 var walvola_topic = process.env.WALVOLA_TOPIC
 var controller_topic = process.env.CONTROLLER_TOPIC
-var test = process.env.MQTTUNAME
+var mqttuname = process.env.MQTTUNAME
 
 app.use(basicAuth({
     authorizer: myAuthorizer,
