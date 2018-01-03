@@ -5,12 +5,27 @@ var mqtt; //mqtt client
 var $$ = Dom7;
 
 var this_js_script = $$('script[src*=appHeating]'); // or better regexp to get the file name..
+var mqttuname = this_js_script[0].attributes["mqttuname"].nodeValue;
+
 var mqtt_uname = this_js_script[0].attributes["mqtt_uname"].nodeValue;
 var mqtt_passwd = this_js_script[0].attributes["mqtt_passwd"].nodeValue;
 var mqtt_server = this_js_script[0].attributes["mqtt_server"].nodeValue;
 var broadcast_dst = this_js_script[0].attributes["broadcast_dst"].nodeValue;
 var walvola_topic = this_js_script[0].attributes["walvola_topic"].nodeValue;
 var controller_topic = this_js_script[0].attributes["controller_topic"].nodeValue;
+
+
+console.log("###########################");
+console.log(mqttuname);
+console.log(mqtt_uname);
+console.log(mqtt_passwd);
+console.log(mqtt_server);
+console.log(broadcast_dst);
+console.log(walvola_topic);
+console.log(controller_topic);
+
+console.log("###########################");
+
 
 var querying_walvola_status = false;
 

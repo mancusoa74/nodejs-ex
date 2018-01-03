@@ -25,7 +25,7 @@ var mqtt_server = process.env.MQTT_SERVER
 var broadcast_dst = process.env.BROADCAST_DST
 var walvola_topic = process.env.WALVOLA_TOPIC
 var controller_topic = process.env.CONTROLLER_TOPIC
-
+var test = process.env.MQTTUNAME
 
 app.use(basicAuth({
     authorizer: myAuthorizer,
@@ -74,7 +74,7 @@ app.get('/iTracker/stepsForm.html', function (req, res) {
 });
 
 app.get('/iHeating', function (req, res) {
-  res.render('iHeating/appHeating.html', {mqtt_uname : mqtt_uname, mqtt_passwd : mqtt_passwd, mqtt_server : mqtt_server, broadcast_dst : broadcast_dst, walvola_topic : walvola_topic, controller_topic : controller_topic});
+  res.render('iHeating/appHeating.html', {mqtt_uname : mqtt_uname, mqtt_passwd : mqtt_passwd, mqtt_server : mqtt_server, broadcast_dst : broadcast_dst, walvola_topic : walvola_topic, controller_topic : controller_topic, mqttuname : mqttuname});
 });
 
 app.get('/appHeating.appcache', function (req, res) {
